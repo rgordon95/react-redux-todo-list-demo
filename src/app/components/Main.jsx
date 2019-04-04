@@ -2,13 +2,18 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from '../store';
 import { ConnectedDashboard } from './Dashboard'
-import { Router, Router } from 'react-router-dom';
+import { Route, Router } from 'react-router-dom';
+import { history } from '../store/history';
 
 export const Main = () => (
-  <Router history={}>
+  <Router history={history}>
     <Provider store={store}>
       <div>
-        <ConnectedDashboard />
+        <Route
+          exact
+          path="/dashboard"
+          render={ () => (<ConnectedDashboard />)}
+        />
       </div>
     </Provider>
   </Router>
