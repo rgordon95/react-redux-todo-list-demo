@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Dashboard } from './components/Dashboard';
+import { Main } from './components/Main';
 import { store } from './store'
 
 ReactDOM.render(
-    <Dashboard />,
+    <Main />,
     document.getElementById("app")
 );
