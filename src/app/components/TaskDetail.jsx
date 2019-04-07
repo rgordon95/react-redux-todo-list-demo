@@ -19,7 +19,7 @@ const TaskDetail = ({
       <input onChange={setTaskName} value={task.name} />
     </div>
     <button onClick={ () => setTaskCompletion(id, !isComplete)}> { isComplete ? `Reopen` : `Complete` }</button>
-    <div>setTaskGroup
+    <div>
       <select onChange={setTaskGroup} value={task.group}>
         {groups.map(group => (
           <option key={group.id} value={group.id}>{group.name}</option>
