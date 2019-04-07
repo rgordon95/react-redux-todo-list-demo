@@ -14,7 +14,7 @@ app.listen(port, console.log("server listening on port", port));
 
 app.use(
   cors(),
-  bodyParse.urlencoded({ extended: true}),
+  bodyParser.urlencoded({ extended: true}),
   bodyParser.json()
 );
 
@@ -27,5 +27,5 @@ export const addNewTask = async task => {
 app.post('/task/new', async (req, res) => {
   let task = req.body.task;
   await addNewTask(task);
-  res.status(200).send();
-}
+  res.status(200).send()
+});
