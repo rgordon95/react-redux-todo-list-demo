@@ -9,17 +9,12 @@ import { history } from '../store/history';
 import { ConnectedNavigation } from './Navigation';
 import { ConnectedTaskDetail } from './TaskDetail';
 
-// console.info("Route guard:", match);
-// if (!store.getState().session || !store.getState().session.authenticated) {
-//   return <Redirect to="/" />;
-// } else {
 
 const RouteGuard = Component => ({ match }) => {
-    if (!store.getState().session.authenticated) {
-      return <Redirect to="/" />
+if(!store.getState().session || !store.getState().session.authenticated){
+        return <Redirect to="/" />
     } {
       return <Component match={match} />
-
     }
 
 }
