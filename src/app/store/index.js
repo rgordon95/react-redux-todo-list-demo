@@ -17,7 +17,7 @@ export const store = createStore(
       switch (type) {
         case mutations.REQUEST_AUTHENTICATE_USER:
           return {...userSession, authenticated: mutations.AUTHENTICATING};
-        case mutations.PROCESSING_AUTHENTICATTE_USER:
+        case mutations.PROCESSING_AUTHENTICATE_USER:
           return {...userSession, authenticated }
         default:
           return userSession;
