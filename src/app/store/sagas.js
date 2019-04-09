@@ -11,6 +11,7 @@ export function* taskCreationSaga() {
   while (true) {
       const {groupID} = yield take(mutations.REQUEST_TASK_CREATION);
       const ownerID = `U1`;
+      // const ownerID = yield select(state=>state.session.id);
       const taskID = uuid();
       yield put (mutations.createTask(taskID, groupID, ownerID));
       const { res } = yield axios.post(url + `/task/new`, {
@@ -47,7 +48,7 @@ export function* userAuthenticationSaga() {
   while (true) {
     const {username, password} = yield take (mutations.REQUEST_AUTHENTICATE_USER);
     try {
-      const { data } = yield axios.post(url + `/authenticate`, { username, password })
+      const { data } = yield axios.post(url + `/authenticate`, { username, password });
       if (!data) {
         throw new Error();
         console.log("Authenticated!", data);
