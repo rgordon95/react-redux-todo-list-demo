@@ -55,7 +55,6 @@ export function* userAuthenticationSaga() {
                 token:data.token
             }));
             history.push(`/dashboard`);
-      }
     } catch (e) {
       console.log(`can't authenticate`);
       yield put (mutations.processAuthenticateUser(mutations.NOT_AUTHENTICATED));
