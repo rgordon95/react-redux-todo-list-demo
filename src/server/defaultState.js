@@ -3,7 +3,7 @@ export const defaultState = {
     users:[{
         id:"U1",
         name:"Dev",
-        friends:[`U2`],
+        friends:["U2"],
         passwordHash: md5("TUPLES")
     },{
         id:"U2",
