@@ -8,6 +8,7 @@ import { Redirect } from 'react-router';
 import { history } from '../store/history';
 import { ConnectedNavigation } from './Navigation';
 import { ConnectedTaskDetail } from './TaskDetail';
+import { ConnectedSignup } from './Signup';
 
 
 const RouteGuard = Component => ({ match }) => {
@@ -25,6 +26,7 @@ export const Main = () => (
       <div>
         <ConnectedNavigation />
         <Route exact path ="/" component={ConnectedLogin} />
+        <Route exact path="/signup" component={ConnectedSignup}/>
         <Route
           exact
           path="/dashboard"
@@ -38,4 +40,4 @@ export const Main = () => (
       </div>
     </Provider>
   </Router>
-)
+);
