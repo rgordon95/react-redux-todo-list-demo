@@ -12,5 +12,8 @@
 4. Express
 5. Node.js
 6. MongoDB
-### Hosting 
+### Hosting
 7. Deployed to Heroku  
+### Build Tools
+8. Babel
+9. Webpack
